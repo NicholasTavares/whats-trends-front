@@ -1,5 +1,6 @@
 import axios from 'axios'
-const BASE_URL = 'http://localhost:3002/api'
+import API_URL from '../../consts'
+const BASE_URL = API_URL.API_URL
 
 export function getDailyTrends() {
     const request = axios.get(`${BASE_URL}/dailytrends`)
