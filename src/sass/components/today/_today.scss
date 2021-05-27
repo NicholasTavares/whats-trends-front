@@ -1,0 +1,79 @@
+.container-relative{
+    width: 100%;
+    color: blueviolet;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 4rem;
+    display: flex;
+
+    @include respond (tab-land){
+        flex-direction: column;
+    }
+
+    //LEFT
+    &__trends{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 42rem;
+        margin-right: 2rem;
+        
+
+        @include respond (tab-land) {
+            flex-direction: row;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 2rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @include respond (phone) {
+            flex-direction: column;
+        }
+
+        & > span{
+            color: black;
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    //RIGHT
+    &__news{
+        display: flex;
+        flex-direction: column;
+
+        @include respond (phone) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__container-news{
+        display: flex;
+        border-radius: 1rem;
+        background-color: white;
+        box-shadow: #ccc 0rem 0.3em 0.3rem 0;
+
+        @include respond (tab-port) {
+            flex-direction: column;
+        }
+        
+    }
+
+    &__container-entertainment{
+        margin-top: 2rem;
+        display: flex;
+        border-radius: 1rem;
+        background-color: white;
+        box-shadow: #ccc 0rem 0.3em 0.3rem 0;
+        
+
+    }
+
+}
+

@@ -1,0 +1,198 @@
+.topic-container{
+    margin: 1rem 0 1rem 0;
+    padding: 0 2rem 0 2rem;
+    color: black;
+    min-width: 28rem;
+
+    &__title-s{
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: #F09100;
+        border-bottom: 2px solid #F09100;
+    }
+
+    &__title-b{
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: black;
+        border-bottom: 2px solid black;
+    }
+
+    &__title-st{
+        position: relative;
+        display: flex;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #4384a7;
+        border-bottom: 2px solid #4384a7;
+
+        &__arrow{
+            position: relative;
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+
+            & > svg:hover{
+                cursor: pointer;
+            }
+        }
+
+        &__options{
+            position: absolute;
+            width: 11rem;
+            background-color: white;
+            border: 1px solid grey;
+            box-shadow: #e6e6e6 0rem 0.2em 0.4rem 0;
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+
+            &__option{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 2.5rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid grey;
+                }
+
+                & > span{
+                    font-size: 1.1rem;
+                    color: black;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: #f7f7f7;
+                }
+            }
+        }
+    }
+
+    &__title-e{
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: #C61142;
+        border-bottom: 2px solid #C61142;
+    }
+    
+    &:not(:last-child){
+        border-right: 1px solid black;
+    }
+
+    @include respond (tab-port) {
+        &:not(:last-child){
+            border-right: none;
+            margin-bottom: 0;
+        }
+        
+    }
+
+    &__container-data{
+        display: flex;
+        flex-direction: column;
+
+        @include respond (tab-port) {
+            flex-direction: row;
+        }
+
+        @include respond (phone) { // width < 600?
+            flex-direction: column;
+        }
+    }
+
+    &__topics{
+        display: flex;
+        flex-direction: column;
+        height: 9.5rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        width: 25rem;
+        height: 10rem;
+
+        &:not(:last-child){
+            border-bottom: 1px solid #ccc;
+        }
+        
+        @include respond (tab-port) {
+            &:not(:last-child){
+                margin-right: 1rem;
+                border-bottom:none;
+            }
+        }
+
+        @include respond (phone) { // width < 600?
+            &:not(:last-child){
+                margin-right: 0rem;
+                border-bottom:none;
+            }
+            width: 38rem;
+        }
+        
+
+        &__title{
+            text-decoration: none;
+            display: block;
+            color: #081317;
+            font-weight: 600;
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+
+            overflow: hidden; // Removendo barra de rolagem
+            text-overflow: ellipsis; // Adicionando "..." ao final
+            display: -webkit-box;
+            -webkit-line-clamp: 3; // Quantidade de linhas
+            -webkit-box-orient: vertical; 
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        &__paragraph{
+            display: block;
+            font-size: 1.15rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        &__related{
+            display: flex;
+            align-items: center;
+            margin-top: auto;   
+
+            &__source{
+                flex-wrap: wrap;
+                width: 92%;
+                margin-top: 0.5rem;
+                font-size: 1.05rem;
+                color:olive;
+                display: inline-block;
+                text-align: left;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            &__icon{
+                display: block;
+                cursor: pointer;
+                width: 8%;
+                text-align: right;
+                line-height: 1rem;
+                font-size: 1.6rem;
+                transition: all 0.5s;
+
+                &:hover{
+                    transform: scale(1.15);
+                }
+
+            }
+        }
+
+        
+    }
+}

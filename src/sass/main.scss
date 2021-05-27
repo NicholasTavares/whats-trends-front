@@ -1,0 +1,11 @@
+@import './base/mixins';
+@import './base/base';
+
+@import "./components/today/today";
+@import "./components/news/news";
+@import "./components/news/horizontal-news";
+@import "./components/trends/carousel-topTrendsBrasil";
+@import "./components/trends/region";
+
+@import "./animations/onMount/showTitle";
+@import "./animations/back-color";
