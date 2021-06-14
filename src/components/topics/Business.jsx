@@ -7,6 +7,7 @@ import { FiChevronDown } from 'react-icons/fi'
 
 // ACTIONS
 import { getRealTimeTrendsBusiness } from '../../redux/actions/trendsActions'
+import Loading from '../loading/Loading'
 
 const Business = ({ business, getRealTimeTrendsBusiness }) => {
 
@@ -34,7 +35,7 @@ const Business = ({ business, getRealTimeTrendsBusiness }) => {
                                 <GiExpand />
                             </span>
                         </div>
-                    </div>) : 'Loading...'}
+                    </div>) : <Loading />}
             </div>
         </section>
 

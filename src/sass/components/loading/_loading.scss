@@ -1,0 +1,10 @@
+.loading{
+    margin: 0 auto;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid gray;
+    border-top-color: aqua;
+    border-radius: 50%;
+
+    animation: LoadingRotate 2s infinite linear;
+}

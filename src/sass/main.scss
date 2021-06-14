@@ -1,6 +1,7 @@
 @import './base/mixins';
 @import './base/base';
 
+@import "./components/loading/loading";
 @import "./components/today/today";
 @import "./components/news/news";
 @import "./components/news/horizontal-news";
@@ -8,4 +9,5 @@
 @import "./components/trends/region";
 
 @import "./animations/onMount/showTitle";
+@import "./animations/onMount/loading";
 @import "./animations/back-color";

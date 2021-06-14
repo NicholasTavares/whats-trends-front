@@ -10,6 +10,7 @@ import { getDailyTrends } from '../../redux/actions/trendsActions'
 
 // JSX
 import TopTrendsBrasil from './TopTrendsBrasil'
+import Loading from '../loading/Loading'
 
 const CarouselContiner = ({ daily, getDailyTrends }) => {
 
@@ -37,7 +38,7 @@ const CarouselContiner = ({ daily, getDailyTrends }) => {
                 {daily ? daily.todayTrends.map((trend, i) => (
                     <TopTrendsBrasil key={i} podium={i + 1} title={trend.title.query} popularity={trend.formattedTraffic} article={trend.articles} />
                 )) : ''}
-            </Carousel> : 'Loading...'}
+            </Carousel> : <Loading />}
         </div>
     )
 }

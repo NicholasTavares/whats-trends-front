@@ -7,6 +7,7 @@ import { ImSearch } from 'react-icons/im'
 
 // ACTIONS
 import { getInterestByRegion } from '../../redux/actions/trendsActions'
+import Loading from '../loading/Loading'
 
 const Region = ({ region, getInterestByRegion }) => {
     const inputText = useRef(null)
@@ -63,7 +64,7 @@ const Region = ({ region, getInterestByRegion }) => {
                             {region[0].keyword}
                         </strong> de <strong>{region[0].startTime}</strong> até <strong>
                             {region[0].endTime}</strong>:
-                        </span>
+                    </span>
                 </div> : ''}
 
 
@@ -85,7 +86,7 @@ const Region = ({ region, getInterestByRegion }) => {
                             <span>{res.value}</span>
                         </div>
                     </div>
-                )) : 'Loading...'}
+                )) : <Loading />}
             </div>
         </section>
     )

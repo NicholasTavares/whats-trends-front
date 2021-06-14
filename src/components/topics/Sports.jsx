@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux'
 
 // ACTIONS
 import { getRealTimeTrendsSports } from '../../redux/actions/trendsActions'
+import Loading from '../loading/Loading'
 
 const Sports = ({ sports, getRealTimeTrendsSports }) => {
 
@@ -33,7 +34,7 @@ const Sports = ({ sports, getRealTimeTrendsSports }) => {
                                 <GiExpand />
                             </span>
                         </div>
-                    </div>) : 'Loading...'}
+                    </div>) : <Loading />}
             </div>
 
         </section>
